@@ -3,7 +3,7 @@
   
   <div align="center">
   <div>
-    <img  src="https://cdn.discordapp.com/attachments/1083105927906988063/1087556677856927774/kyoku.png" width="" height="400">
+    <img  src="https://cdn.discordapp.com/attachments/1083105927906988063/1087773715695153183/kyoku_logo.png" width="" height="400">
   </div>
     <br>
   </div>
