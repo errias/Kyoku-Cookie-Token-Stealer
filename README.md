@@ -1,10 +1,6 @@
 <h1 align="center">
-  Kyoku Token Grabber
-	
-
-
-
-
+  Kyoku Token Grabber <br> <br>
+  <img src="https://cdn.discordapp.com/attachments/1083105927906988063/1087553379959574528/kyokulogo.png">
 ## Features
 
 - Discord Info
