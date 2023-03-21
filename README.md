@@ -2,7 +2,9 @@
   </h1>
   
   <div align="center">
-    <img  src="https://cdn.discordapp.com/attachments/1083105927906988063/1087553379959574528/kyokulogo.png" width="" height="400">
+  <div>
+    <img  src="https://cdn.discordapp.com/attachments/1083105927906988063/1087556677856927774/kyoku.png" width="" height="400">
+  </div>
     <br>
   </div>
   
