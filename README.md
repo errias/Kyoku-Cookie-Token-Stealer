@@ -55,8 +55,22 @@
       - Self Destruct
    
   <hr  style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;"  noshade=""  size="20"  width="100%">
-    
-  ## Installation
+  <h1>Images</h1>
+  <hr>
+  <h2>Pc Info</h2>
+  <img src="https://cdn.discordapp.com/attachments/1083105927906988063/1087783846067576832/pcinfo.png">
+  <hr>
+  <h2>Discord Info</h2>
+  <img src="https://cdn.discordapp.com/attachments/1083105927906988063/1087783845589434518/dc.png">
+  <hr>
+  <h2>Roblox Info<h2>
+  <img src="https://cdn.discordapp.com/attachments/1083105927906988063/1087783845392293958/boblox.png">
+  <hr>
+  <h2>Desktop Screenshot</h2>
+  <img src="https://cdn.discordapp.com/attachments/1083105927906988063/1087783845828493453/ss.png">
+  
+  <hr  style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;"  noshade=""  size="20"  width="100%">  
+  <h1>Installation</h1>
   
   ### 1. Download Python:
   
