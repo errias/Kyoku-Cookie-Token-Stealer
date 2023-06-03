@@ -67,7 +67,7 @@
   <img src="/img/screenshot.png">
   <hr>
   <h2>Desktop Screenshot</h2>
-  <img src="/img/screenshot.png">
+  <img src="/img/rbinfo.png">
   
   <hr  style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;"  noshade=""  size="20"  width="100%">  
   <h1>Installation</h1>
