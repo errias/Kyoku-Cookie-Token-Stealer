@@ -3,7 +3,7 @@
   
   <div align="center">
   <div>
-    <img  src="img/logo.jpg" width="" height="400">
+    <img  src="img/logo.jpg" width="600" height="300">
   </div>
     <br>
   </div>
