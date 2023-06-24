@@ -28,7 +28,7 @@
   
   - Game Data
       - Minecraft Session Info
-      - Roblox Cookie & Other Data
+      - Roblox Cookie & Other Data 
   
   - System info
       - User
