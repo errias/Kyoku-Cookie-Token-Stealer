@@ -106,7 +106,7 @@
   The .exe file will appear in the same folder where all the other files are with the name you set it as and you can now send
   this to your victims.😈
   ```
-  
+  <img  src="img/footer.png">
   <hr  style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;"  noshade=""  size="20"  width="100%">
     
 
