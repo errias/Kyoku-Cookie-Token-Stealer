@@ -1,3 +1,0 @@
-pyinstaller code for converting py to exe;
-
-pyinstaller yourfile.py --onefile --noconsole
