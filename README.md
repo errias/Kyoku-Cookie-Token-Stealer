@@ -1,6 +1,6 @@
 <h1 align="center">
   </h1>
-  
+
   <div align="center">
   <div>
     <img  src="img/bg.png">
@@ -75,7 +75,7 @@
   ### 1. Download Python:
   
   ```
-  Make sure you have Python installed 3.11.5+ and it is added to your path
+  Make sure you have Python installed 3.11.5+ and- it is added to your path
   ```
   ### 2. Download The Files:
   
